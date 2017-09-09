@@ -1,5 +1,6 @@
 # softlayer-cli
-SoftLayer CLI Python client
+
+SoftLayer CLI Python client container
 
 ## configure container
 
@@ -18,3 +19,17 @@ timeout = <timeout>
 Run the following command:
 
 `docker run -ti --name sl-cli -v <path_to_your_softlayer_config>/.softlayer:/root/.softlayer softlayer-cli sh`
+
+## cli usage
+
+List all virtual instances
+
+`slcli vs list`
+
+List virtual instances from `your-domain.com`
+
+`slcli vs list --domain "your-domain.com"`
+
+Cancel a virtual instance
+
+`slcli vs cancel <instance-id>`
